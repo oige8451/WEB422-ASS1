@@ -12,11 +12,14 @@
  * Cyclic URL:
  *
  *****************************************************************************/
+require("dotenv").config();
+
 const HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const mongoose = require("mongoose");
-require("dotenv").config();
+
 
 const ListingsDB = require("./modules/listingsDB.js");
 const db = new ListingsDB(); // Create a new instance of ListingsDB
