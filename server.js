@@ -28,10 +28,9 @@ app.use(cors());
 //support for incoming JSON entities.
 app.use(express.json());
 
-const mongoURI = process.env.MONGODB_CONN_STRING;
 
 // Initialize the database and start the server
-db.initialize(mongoURI)
+db.initialize(process.env.MONGODB_CONN_STRING)
   .then(() => {
     app.listen(HTTP_PORT, () => {
       console.log(`Server listening on port ${HTTP_PORT}`);
