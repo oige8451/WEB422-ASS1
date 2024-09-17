@@ -18,17 +18,15 @@ const HTTP_PORT = process.env.PORT || 8080;
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+
 const mongoose = require("mongoose");
 
 
 const ListingsDB = require("./modules/listingsDB.js");
 const db = new ListingsDB(); // Create a new instance of ListingsDB
-
-const path = require("path");
 const app = express();
 
 app.use(cors());
-//support for incoming JSON entities.
 app.use(express.json());
 
 
